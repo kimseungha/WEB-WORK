@@ -1,0 +1,114 @@
+@charset "UTF-8";
+html,body{
+  font-family:'나눔고딕','Nanum Gothic' sans-serif;
+  width:100%; height:100%;
+}
+
+/*header start*/
+header{
+  position: fixed;
+  width:90%; height:45px;
+  right:50%;
+  margin-right:-45%;
+  background-color:#f0e5de;
+  /*border-bottom: 1px solid #000;*/
+}
+nav.gnb{float:right;}
+nav.gnb ul li{
+  float:left;
+  padding: 0 25px;
+  line-height: 45px;
+}
+nav.gnb ul li a{color:#7c7877;}
+nav.gnb ul li a:hover{
+  color:#abd0ce;
+}
+/*header end*/
+
+/*div wrap*/
+.wrap{width:90%; margin:auto; background-color:#f0e5de;}
+#content>div{
+  width:100%; height:100vh;
+  padding-top:45px;
+}
+/*content start*/
+#content{}
+
+/*home start*/
+#home{}
+.home_wrap{
+  width: 1265px;
+  height:470px;
+  margin: 130px auto;
+}
+.circle{
+  display: inline-block;
+  float:left;
+  width:470px; height:470px;
+  border-radius: 470px;
+  background-color:#abd0ce;
+  text-align: center;
+  font: normal 150px/470px "Nanum Gothic";
+  color:rgba(255, 255, 255,0.7);
+}
+.home_content{
+  float:left;
+  position: relative;
+  display: inline-block;
+  width: 795px;
+}
+.home_h1_publisher{
+  font: normal 150px/470px "Nanum Gothic";
+  color:rgba(255, 255, 255,0.7);
+  padding-left:30px;
+}
+.home_content_txt{
+  width: 680px;
+  height: 145px;
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+  color: #abd0ce;
+  font: bold 32px/48px 'Nanum Gothic';
+  }
+.home_h3_hello{text-align:left;}
+.home_h3_name{text-align: right;}
+.home_h3_name strong{font-weight:700; font-size:50px;}
+.home_h4_frontEnd{
+  text-align:right;
+  font: bold 24px/60px "Nanum Gothic"; color:#fff;
+}
+span.more{
+  display: block;
+  margin: 0 auto;
+  padding-top: 65px;
+  width: 32px; height: 151px;
+  font-size: 14px;
+  color: #7c7877;
+  background: url(../image/more.png) no-repeat center center;
+  background-size: 10px;
+  cursor: pointer;
+}
+/*skill start*/
+#skill{}
+div.skill_top{
+  width: 980px;
+  height: 400px;
+  background: pink;
+}
+.skill_txt_kr> li{
+  display: block
+}
+.skill_txt_icon > li{
+  float:left;
+}
+/*work_web start*/
+#work_web{}
+/*work_design start*/
+#work_design{}
+/*profile start*/
+#profile{}
+/*contact start*/
+#contact{}
+
+/*content end*/
