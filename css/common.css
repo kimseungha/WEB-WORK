@@ -93,15 +93,28 @@ span.more{
 #skill{}
 div.skill_top{
   width: 980px;
-  height: 400px;
   background: pink;
 }
+.skill_txt{
+  width:800px;
+  background: lavender;
+  margin:auto;
+}
 .skill_txt_kr> li{
-  display: block
+  display: block;
+  font: bold 24px"Nanum Gothic"; color:#fff;
+  line-height: 50px;
+  border-bottom: 1px solid
+}
+/*skill icon*/
+.skill_txt_icon{display:inline-block;}
+.skill_txt_icon img{
+  width:50px;
 }
 .skill_txt_icon > li{
   float:left;
 }
+.skill_txt_icon span{display:block;}
 /*work_web start*/
 #work_web{}
 /*work_design start*/
