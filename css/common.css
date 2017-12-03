@@ -94,12 +94,16 @@ span.more{
 div.skill_top{
   width: 980px;
   background: pink;
+  margin:auto;
+  margin-top:100px;
 }
 .skill_txt{
   width:800px;
   background: lavender;
   margin:auto;
 }
+/*skill txt 한글 리스트*/
+.skill_txt_kr{text-align:center;}
 .skill_txt_kr> li{
   display: block;
   font: bold 24px"Nanum Gothic"; color:#fff;
@@ -115,6 +119,14 @@ div.skill_top{
   float:left;
 }
 .skill_txt_icon span{display:block;}
+/*skill code*/
+.skill_bottom{
+  text-align: center;
+  margin-top:60px;
+}
+.skill_bottom p{
+  line-height:30px;
+}
 /*work_web start*/
 #work_web{}
 /*work_design start*/
