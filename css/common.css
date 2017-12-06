@@ -1,7 +1,7 @@
 @charset "UTF-8";
 html,body{
-  font-family:'나눔고딕','Nanum Gothic' sans-serif;
-  width:100%; height:100%;
+  width:100%;height:100%;
+  font-family: "나눔고딕";
 }
 
 /*header start*/
@@ -11,36 +11,55 @@ header{
   right:50%;
   margin-right:-45%;
   background-color:#f0e5de;
+  z-index: 9999;
   /*border-bottom: 1px solid #000;*/
 }
-nav.gnb{float:right;}
-nav.gnb ul li{
+nav.gnb{float:right;padding-right: 10px;}
+nav.gnb>ul>li{
+  box-sizing: border-box;
+  width:100px;
   float:left;
-  padding: 0 25px;
   line-height: 45px;
+  text-align: center;
 }
 nav.gnb ul li a{color:#7c7877;}
 nav.gnb ul li a:hover{
   color:#abd0ce;
 }
+.sub_gnb li{
+}
+.sub_gnb li a{
+  display: block;
+  background-color:rgba(255, 255, 255,0.7);
+  box-sizing: border-box;
+  width:100px;
+  line-height: 45px;
+  text-align: center;
+}
+
+
 /*header end*/
 
-/*div wrap*/
-.wrap{width:90%; margin:auto; background-color:#f0e5de;}
+/*content start*/
+#content{width:90%; margin:auto; background-color:#f0e5de;}
 #content>div{
   width:100%; height:100vh;
   padding-top:45px;
 }
-/*content start*/
-#content{}
-
 /*home start*/
-#home{}
+#home{position: relative;}
 .home_wrap{
-  width: 1265px;
-  height:470px;
-  margin: 130px auto;
+  position: absolute;
+  top:50%; left:50%;
+  width: 1266px;height:470px;
+  margin-top:-270px;
+  margin-left:-633px;
 }
+/*.home_wrap::after{
+  display: block;
+  content:"";
+  clear:both;
+}*/
 .circle{
   display: inline-block;
   float:left;
@@ -80,9 +99,10 @@ nav.gnb ul li a:hover{
 }
 span.more{
   display: block;
-  margin: 0 auto;
-  padding-top: 65px;
   width: 32px; height: 151px;
+  position: absolute;
+  left:50%; bottom:0;
+  padding-top: 65px;
   font-size: 14px;
   color: #7c7877;
   background: url(../image/more.png) no-repeat center center;
@@ -90,50 +110,330 @@ span.more{
   cursor: pointer;
 }
 /*skill start*/
-#skill{}
+#skill{position: relative;}
+div.skill_wrap{
+  width:980px; height: 650px;
+  position: absolute;
+  top:50%; left:50%;
+  margin-top:-325px;
+  margin-left:-490px;
+
+}
 div.skill_top{
   width: 980px;
-  background: pink;
-  margin:auto;
-  margin-top:100px;
 }
 .skill_txt{
   width:800px;
-  background: lavender;
   margin:auto;
+  margin-top:-40px;
+}
+/*skill 따옴표*/
+.skill_mark span{
+  display:inline-block;
+  width:80px; height:80px;
+  text-indent: -5000px;
+}
+.quote{
+  float:left;
+  background: url(../image/open.png) no-repeat;
+  background-size: 78px;
+}
+.unquote{
+  float:right;
+  background: url(../image/close.png) no-repeat;
+  background-size: 78px;
+}
+.skill_mark::after{
+  content:"";
+  display:block;
+  clear:both;
+  margin-top:-40px;
 }
 /*skill txt 한글 리스트*/
 .skill_txt_kr{text-align:center;}
 .skill_txt_kr> li{
   display: block;
-  font: bold 24px"Nanum Gothic"; color:#fff;
-  line-height: 50px;
-  border-bottom: 1px solid
+  font: 50px/60px "나눔명조";
+  color:#7c7877;
+  border-bottom: 1px solid;
+  padding-bottom:45px;
+}
+.skill_txt_kr> li:nth-child(2){
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.skill_txt_kr> li:nth-child(3){
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.skill_txt_kr> li > span{
+  margin-top:-40px;
 }
 /*skill icon*/
 .skill_txt_icon{display:inline-block;}
+.skill_txt_icon > li{
+  float: left;
+  text-align: center;
+  padding: 0 15px 0 15px;
+  height: 60px;
+}
+.skill_txt_icon span{
+  font: 12px "나눔명조"; color:#7c7877;
+}
 .skill_txt_icon img{
   width:50px;
 }
-.skill_txt_icon > li{
-  float:left;
-}
-.skill_txt_icon span{display:block;}
+.skill_txt_icon .jquery_icon{width:170px; margin-top:10px;}
+.skill_txt_icon .bootstarp_icon{width:65px;}
+.skill_txt_icon span{display:block;margin-top:4px;}
+
 /*skill code*/
 .skill_bottom{
   text-align: center;
   margin-top:60px;
 }
+.skill_bottom  img{padding-bottom:20px;}
 .skill_bottom p{
   line-height:30px;
+  font: 18px/28px "나눔고딕";
+  color:#7c7877;
 }
 /*work_web start*/
-#work_web{}
+#work_web{position: relative;}
+#work_web > h2{
+  font: bold 34px "나눔고딕";
+  color: #abd0ce;
+  padding-top: 43px;
+  padding-left: 147px;
+}
+.work_wrap{
+  width:100%;
+  margin-top:165px;
+  position: relative;
+}
+.work_wrap>span, .work_design_wrap>span{
+  position: absolute; top:50%;
+  margin-top: -40px;
+  display:inline-block;
+  width:80px; height:65px;
+  cursor: pointer;
+}
+span.pre_btn{
+  left:5%;
+  background:url(../image/pre_btn.png) no-repeat;
+  background-size: 80px;
+}
+span.pre_btn:hover{
+  background-position: bottom;
+}
+span.next_btn{
+  right:5%;
+  background:url(../image/next_btn.png) no-repeat;
+  background-size: 80px;
+}
+span.next_btn:hover{
+  background-position: bottom;
+}
+.work_web_showbox{
+  width: 1240px;
+    height: 485px;
+    margin: auto;
+    overflow: hidden;
+}
+ul.work_web_list{width:3000px;}
+ul.work_web_list li img{
+  width:590px;
+}
+.work_web_list li{
+  float:left;
+  padding-right: 60px;
+  text-align: left;
+}
+.work_web_list li div{
+  padding:30px;
+}
+.work_web_list li div h3{
+  font:bold 20px/25px "나눔고딕";
+  padding-bottom: 6px;
+  color:#595959;
+}
+.work_web_list li div p {
+  font:14px/20px "나눔고딕";
+}
+.work_web_list li div p.practice{
+  color:#rgb(121, 31, 0);
+}
+.work_web_list li div a{
+  float:right;
+  margin-top:-85px;
+  display: inline-block;
+  width:70px; height:30px;
+  background-color:#abd0ce;
+  color:#fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 3px;
+}
 /*work_design start*/
-#work_design{}
+#work_design{position:relative;}
+#work_web{position: relative;}
+.work_design_wrap{
+width:100%;
+margin-top:115px;
+position: relative;
+}
+.work_design_showbox{
+  width: 840px;
+  height: 550px;
+  margin: auto;
+  overflow: hidden;
+}
+#work_design > h2{
+font: bold 34px "나눔고딕";
+  color: #abd0ce;
+  padding-top: 43px;
+  padding-left: 147px;
+}
+ul.work_design_list{width:3000px;}
+ul.work_design_list li img{
+    width:840px;
+}
+.work_design_list li{
+    float:left;
+    text-align: center;
+}
+.work_design_list li div{
+}
+.work_design_list li div h3{
+    font:bold 20px/25px "나눔고딕";
+    text-align: left;
+    padding-bottom: 6px;
+    color:#595959;
+    padding-left:20px;
+}
+.work_design_list li div p {
+    font:16px/24px "나눔고딕";
+    padding-left:20px;
+}
+ul.work_design_list li div p.design_txt{
+  text-align: left;
+}
+.work_design_list li div a{
+    float:right;
+    margin-top:-55px;
+    display: inline-block;
+    width:70px; height:30px;
+    background-color:#abd0ce;
+    color:#fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 3px;
+}
 /*profile start*/
-#profile{}
+#profile{position:relative;}
+.profile_wrap{
+  width:850px;
+  height:300px;
+  position: absolute;
+  top:50%;left:50%;
+  margin-top:-150px; margin-left:-425px;
+}
+.profile_title h2{
+  font: 32px/40px "나눔명조"; color:#000;
+  text-align: center;
+}
+.profile_txt{
+  padding-top:30px;
+}
+.profile_txt p{
+  text-align: center;
+  font: 14px/24px "나눔고딕"; color:#000;
+  padding-bottom:10px;
+}
 /*contact start*/
-#contact{}
-
+#contact{position: relative;}
+.background{
+  position: absolute;
+  top:50%;
+  margin-top:-350px;
+  width:100%; height:700px;
+  background-color: #fff;
+  opacity:0.3;
+}
+.contact_wrap{
+  box-sizing: border-box;
+  position: absolute;
+  top:50%; left:50%;
+  width:800px; height:560px;
+  margin-top:-280px; margin-left:-400px;
+}
+.contact_wrap h1{
+  font-size:45px;
+  padding-left:35px;
+  font-weight: bold;
+  font-family: "나눔스퀘어";
+  color:#abd0ce;
+  text-align: center;
+}
+.contact_wrap p{
+  text-align: right;
+  font: 12px "나눔고딕";
+  padding:15px ;
+}
+.contact_table{
+  width:100%;
+}
+.contact_table tr{height:50px;}
+.contact_table tr.textarea_tr{position: relative;}
+.contact_table th{
+  font: 18px "나눔고딕"; color:#615e5d;
+  width:18%;
+  text-align: center;
+  letter-spacing: 15px;
+}
+.contact_table td{
+  width:82%;
+}
+.contact_table input,textarea{
+  width:100%;
+  box-sizing: border-box;
+  height:40px;
+  line-height: 40px;
+  border-radius: 4px;
+  border:none;
+  padding-left:15px;
+}
+.contact_table textarea{height:260px; resize:none;}
+.contact_table th.textarea_th{
+  position: absolute;
+}
+button.submit_btn {
+  float:right;
+  margin-top:10px;
+  font: 14px "나눔고딕";
+  width:110px; height:40px;
+  background-color: #8c8c8c;
+  color:#fff;
+  border-radius: 3px;
+  border:none;
+  cursor:pointer;
+  padding:0;
+}
+button.submit_btn:hover {
+  background-color:#abd0ce;
+}
 /*content end*/
+
+/*footer start*/
+footer{
+  width:90%; margin:auto;
+  background-color:#abd0ce;
+  height:60px;
+}
+address{
+  font: 18px/60px "나눔고딕"; color:#fff;
+  float:right;
+  padding-right:20px;
+}
