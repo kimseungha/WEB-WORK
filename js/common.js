@@ -1,4 +1,31 @@
-$(document).ready(function(){
+$(function(){
+
+  var menu= $(".gnb>ul>li");
+  var contents = $("#content>div");
+  var subMenu = $(".gnb>ul>li>.sub_gnb>li");
+
+  $(menu).click(function(event){
+    var tg = $(this);
+    var i = tg.index();
+    var section = contents.eq(i);
+    var tt = section.offset().top;
+    console.log("이전"+section);
+    if(i==3){
+      section = contents.eq(i+1);
+      $("html,body").stop().animate({scrollTop:tt});
+    }else{section = contents.eq(i);}
+    $("html,body").stop().animate({scrollTop:tt});
+    return false;
+});
+$(subMenu).click(function(event){
+  var tg = $(this);
+  var i = tg.index();
+  var section = contents.eq(i+2);
+  var tt = section.offset().top;
+  $("html,body").stop().animate({scrollTop:tt});
+  return false;
+})
+
 
   // 서브 네비게이션 클릭시 나타내기
   $('.sub_gnb').hide();
@@ -8,6 +35,8 @@ $(document).ready(function(){
       $(this).slideUp();
     });
   });
+
+
 
 // 퍼블리셔,디자이너 단어 나타내기
   function autoType(elementClass, typingSpeed){
@@ -101,7 +130,7 @@ $(document).ready(function(){
    }
    $(webSliderbtn).removeClass("on");
    $(webSliderbtn).eq(sdIdx).addClass("on");
- },2000)
+ },3000)
 //슬라이드 인덱스 버튼 활성화
 $("div.work_web_showbox > div.main_slider_under_btn> a.stop_btn").click(function(){
   clearInterval(start);
@@ -124,7 +153,6 @@ itemBox_2.append(copyObj_2_padding);
 
  var designSlidebtn=$("div.work_design_showbox>.main_slider_under_btn a");
  $(designSlidebtn).eq(0).addClass("on");
-
 
 $("div.work_design_wrap> span.next_btn").on("click",function(){
   clearInterval(start_2);
@@ -172,11 +200,11 @@ var start_2 = setInterval(function(){
   }
   $(designSlidebtn).removeClass("on");
   $(designSlidebtn).eq(sdIdx).addClass("on");
-},2000)
+},3000)
 
 $("div.work_design_showbox > div.main_slider_under_btn> a.stop_btn").click(function(){
   clearInterval(start_2);
   $(this).removeClass("stop_btn")
   $(this).addClass("play_btn");
 })
-});//메인 스크립트 닫기
+});
